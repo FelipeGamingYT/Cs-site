@@ -63,7 +63,7 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
 
 1. **Clonar o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/site-novo-cs.git
+   git clone https://github.com/FelipeGamingYT/site-novo-cs.git
    ```
 2. **Abrir localmente:**
    Basta abrir o arquivo `index.html` em qualquer navegador moderno.
@@ -81,3 +81,4 @@ Este site foi otimizado para voar! 🚀
 
 ---
 Desenvolvido por **Felipe Sp3c**
+
