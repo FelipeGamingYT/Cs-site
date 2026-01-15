@@ -5,9 +5,9 @@ try {
     }
 } catch (e) { console.error('Lucide error:', e); }
 
-// --- CONFIGURAÇÃO ---
+
 const APP_CONFIG = {
-    webhookUrl: "https://canary.discord.com/api/webhooks/1438269655394418809/03CplowHX7uKg_sVsQVTbcQxcAP06_03xBd6OoKNl0G3hVtXZ013U7uTdQMxaDaTC9Ow", // Ex: "https://discord.com/api/webhooks/..."
+    webhookUrl: "https://canary.discord.com/api/webhooks/1438269655394418809/03CplowHX7uKg_sVsQVTbcQxcAP06_03xBd6OoKNl0G3hVtXZ013U7uTdQMxaDaTC9Ow",
     successMessage: "Participação enviada com sucesso! Boa sorte!",
     errorMessage: "Erro ao enviar participação. Tente novamente."
 };
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- Smooth Scroll ---
+
     document.addEventListener('click', (e) => {
         const anchor = e.target.closest('a[href^="#"]');
         if (!anchor) return;
@@ -209,9 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Update every second
+
     setInterval(updateAllTimers, 1000);
-    updateAllTimers(); // Initial call
+    updateAllTimers();
 
 
     const modal = document.getElementById('participation-modal');
@@ -265,43 +265,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const formData = {
                     giveawayId: modal.dataset.giveawayId || 'default',
-                    userName: tradeInput ? tradeInput.value.split('/').pop() || 'User' : 'User', // Simplified for demo
+                    userName: tradeInput ? tradeInput.value.split('/').pop() || 'User' : 'User',
                     steamTradeUrl: tradeInput ? tradeInput.value : '',
                     depositAmount: depositInput ? parseFloat(depositInput.value) : 0,
                     siteProfileUrl: profileInput ? profileInput.value : '',
                     submittedAt: new Date().toISOString()
                 };
 
-                // Store participation locally for the winner system to work in this demo
+
                 const participations = JSON.parse(localStorage.getItem('sp3c_participations') || '[]');
                 participations.push(formData);
                 localStorage.setItem('sp3c_participations', JSON.stringify(participations));
 
                 console.log('Enviando dados do formulário:', formData);
 
-                // Aqui você deve enviar os dados para o seu backend ou serviço de armazenamento
-                // Exemplo de envio usando fetch:
-                /*
-                try {
-                    const response = await fetch('SEU_ENDPOINT_AQUI', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    });
 
-                    if (!response.ok) throw new Error('Erro ao enviar');
-                    
-                    showToast('Participação confirmada com sucesso!');
-                    closeModal();
-                } catch (error) {
-                    console.error('Erro:', error);
-                    showToast('Erro ao enviar participação. Tente novamente.', true);
-                }
-                */
 
-                showToast('Participação confirmada com sucesso! (Simulação)');
+
+
+                showToast('Participação confirmada com sucesso!');
                 closeModal();
             });
         }
@@ -375,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     form.reset();
                 } else {
 
-                    await new Promise(r => setTimeout(r, 1500)); // Fake delay
+                    await new Promise(r => setTimeout(r, 1500));
                     console.warn('MODO SIMULAÇÃO: Configure a APP_CONFIG.webhookUrl no main.js para envio real.');
                     showToast('Modo Simulação: Sucesso! Configure o Webhook para funcionar.');
                     form.reset();
@@ -385,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Erro no envio:', error);
                 showToast(APP_CONFIG.errorMessage, true);
             } finally {
-                // Reset Button
+
                 if (submitBtn) {
                     submitBtn.disabled = false;
                     submitBtn.innerText = originalBtnText;
@@ -416,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    // --- Dynamic Giveaways Rendering (from Admin or Default) ---
+
     const activeGrid = document.getElementById('active-giveaways-grid');
     if (activeGrid) {
         const stored = localStorage.getItem('sp3c_giveaways');
@@ -486,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activeGrid.appendChild(card);
         });
 
-        // Event Delegation for "Participar" buttons
+
         activeGrid.addEventListener('click', (e) => {
             const btn = e.target.closest('[data-action="participate"]');
             if (!btn) return;

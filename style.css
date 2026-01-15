@@ -5,11 +5,11 @@
     --card: #0f172a;
     --card-foreground: #ffffff;
     --primary: #d946ef;
-    /* Fuchsia-500 */
+
     --primary-hover: #c026d3;
-    /* Fuchsia-600 */
+
     --secondary: #8b5cf6;
-    /* Violet-500 */
+
     --border: #1e293b;
     --radius: 0.5rem;
     --font-heading: 'Bebas Neue', sans-serif;
@@ -54,7 +54,7 @@ ul {
     padding: 0 1.5rem;
 }
 
-/* Background Effects */
+
 .bg-gradient-effect {
     position: fixed;
     top: 0;
@@ -68,7 +68,7 @@ ul {
     pointer-events: none;
 }
 
-/* Typography */
+
 h1,
 h2,
 h3,
@@ -93,7 +93,7 @@ h6 {
     color: var(--muted);
 }
 
-/* Buttons */
+
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -172,7 +172,7 @@ h6 {
     background: rgba(217, 70, 239, 0.1);
 }
 
-/* Header */
+
 .header {
     position: fixed;
     top: 0;
@@ -298,7 +298,7 @@ h6 {
     display: block;
 }
 
-/* Hero Section */
+
 .hero {
     padding-top: 120px;
     padding-bottom: 4rem;
@@ -429,7 +429,7 @@ h6 {
     }
 }
 
-/* Generic Section */
+
 .section {
     padding: clamp(4rem, 8vw, 6rem) 0;
 }
@@ -960,7 +960,7 @@ h6 {
     }
 }
 
-/* Footer */
+
 .footer {
     border-top: 1px solid var(--border);
     padding-top: 4rem;

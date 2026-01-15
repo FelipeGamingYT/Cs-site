@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderGiveawaysTable();
     updateStats();
 
-    // Login Form
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Giveaway Form
     const configForm = document.getElementById('giveaway-config-form');
     if (configForm) {
         configForm.addEventListener('submit', (e) => {
@@ -55,29 +53,23 @@ function switchTab(tabName) {
     const views = ['view-dashboard', 'view-giveaways'];
     const titles = { 'dashboard': 'Visão Geral', 'giveaways': 'Gerenciar Sorteios' };
 
-    // Hide all
     document.getElementById('view-dashboard').style.display = 'none';
     document.getElementById('view-giveaways').style.display = 'none';
 
-    // Show Selected
     document.getElementById(`view-${tabName}`).style.display = 'block';
 
-    // Update Title
     document.getElementById('page-title').innerText = titles[tabName];
 
-    // Update Menu Active State
     document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
-    // (This works simply for now, robust implementation would use IDs)
+
 }
 
-// --- CRUD Logic ---
 
-// Get data from localStorage or Default
+
 function getGiveaways() {
     const stored = localStorage.getItem('sp3c_giveaways');
     if (stored) return JSON.parse(stored);
 
-    // Default Data if empty
     const defaults = [
         {
             id: 1,
@@ -85,7 +77,7 @@ function getGiveaways() {
             value: "R$ 150,00",
             image: "./assets/skin_ak47.png",
             minDeposit: "$5.00",
-            endAt: new Date(Date.now() + 86400000 * 2).toISOString(), // 2 days from now
+            endAt: new Date(Date.now() + 86400000 * 2).toISOString(),
             winner: null
         },
         {
@@ -94,7 +86,7 @@ function getGiveaways() {
             value: "R$ 200,00",
             image: "./assets/skin_awp.png",
             minDeposit: "$10.00",
-            endAt: new Date(Date.now() + 3600000).toISOString(), // 1 hour from now
+            endAt: new Date(Date.now() + 3600000).toISOString(),
             winner: null
         }
     ];
@@ -156,7 +148,6 @@ function editGiveaway(id) {
     document.getElementById('skin-image').value = item.image;
     document.getElementById('min-deposit').value = item.minDeposit;
 
-    // Format date for datetime-local
     const date = new Date(item.endAt);
     date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
     document.getElementById('end-date').value = date.toISOString().slice(0, 16);
@@ -173,7 +164,6 @@ function drawWinner(id) {
         if (!confirm('Este sorteio já tem um vencedor. Deseja sortear novamente?')) return;
     }
 
-    // Simulate getting participants (in a real app, this would be from your database)
     const participants = JSON.parse(localStorage.getItem('sp3c_participations') || '[]');
     const giveawayParticipants = participants.filter(p => p.giveawayId == id);
 
@@ -183,23 +173,22 @@ function drawWinner(id) {
         const randomIndex = Math.floor(Math.random() * giveawayParticipants.length);
         winnerName = giveawayParticipants[randomIndex].userName;
     } else {
-        // Dummy if no real participants
         const dummyNames = ["Gaules", "Fallen", "Coldzera", "S1mple", "Niko", "Zywoo", "Fer", "Taco"];
         winnerName = dummyNames[Math.floor(Math.random() * dummyNames.length)];
         alert('Nenhuma participação real encontrada. Sorteando ganhador fictício para teste.');
     }
 
     giveaways[index].winner = winnerName;
-    giveaways[index].endAt = new Date().toISOString(); // End it now
+    giveaways[index].endAt = new Date().toISOString();
 
     localStorage.setItem('sp3c_giveaways', JSON.stringify(giveaways));
 
-    // Add to history if not there (simulated)
+
     alert(`O vencedor é: ${winnerName}!`);
     renderGiveawaysTable();
 }
 
-// UI Helpers
+
 function renderGiveawaysTable() {
     const tbody = document.getElementById('giveaways-table-body');
     if (!tbody) return;

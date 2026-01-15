@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../style.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <style>
-        /* Admin Specific Styles */
         .admin-login-wrapper {
             height: 100vh;
             display: flex;
@@ -26,7 +25,7 @@
             grid-template-columns: 250px 1fr;
             min-height: 100vh;
             display: none;
-            /* Hidden by default until login */
+
         }
 
         .sidebar {
@@ -140,7 +139,7 @@
             color: white;
         }
 
-        /* Modal for Add/Edit */
+
         .admin-modal {
             position: fixed;
             top: 0;
@@ -165,7 +164,7 @@
 </head>
 
 <body>
-    <!-- Login Section -->
+
     <div id="login-section" class="admin-login-wrapper">
         <div class="form-card" style="width: 100%; max-width: 400px;">
             <div class="text-center mb-8">
@@ -182,7 +181,7 @@
         </div>
     </div>
 
-    <!-- Dashboard Section -->
+
     <div id="dashboard-section" class="dashboard-layout">
         <aside class="sidebar">
             <a href="../index.html" class="logo" style="text-decoration: none;">
@@ -202,7 +201,7 @@
         </aside>
 
         <main class="main-content">
-            <!-- Header -->
+
             <div class="admin-header">
                 <h2 id="page-title">Visão Geral</h2>
                 <button class="btn-primary" id="btn-add-new" onclick="openGiveawayModal()">
@@ -210,7 +209,7 @@
                 </button>
             </div>
 
-            <!-- Content: Overview -->
+
             <div id="view-dashboard">
                 <div class="stats-grid">
                     <div class="stat-card">
@@ -228,7 +227,7 @@
                 </div>
             </div>
 
-            <!-- Content: Giveaways List -->
+
             <div id="view-giveaways" style="display: none;">
                 <table class="data-table">
                     <thead>
@@ -241,14 +240,14 @@
                         </tr>
                     </thead>
                     <tbody id="giveaways-table-body">
-                        <!-- Populated by JS -->
+
                     </tbody>
                 </table>
             </div>
         </main>
     </div>
 
-    <!-- Modal for Adding/Editing Giveaway -->
+
     <div id="giveaway-modal" class="admin-modal">
         <div class="modal-content" style="max-width: 500px;">
             <button class="modal-close" onclick="closeGiveawayModal()"><i data-lucide="x"></i></button>
