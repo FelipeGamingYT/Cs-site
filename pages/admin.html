@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Admin | SP3C CS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        /* Admin Specific Styles */
+        .admin-login-wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #1e1e24 0%, #09090b 100%);
+        }
+
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+            display: none;
+            /* Hidden by default until login */
+        }
+
+        .sidebar {
+            background: #18181b;
+            border-right: 1px solid #27272a;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            color: #a1a1aa;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-item:hover,
+        .menu-item.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .main-content {
+            padding: 2rem;
+            background: #09090b;
+            overflow-y: auto;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: #18181b;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #27272a;
+        }
+
+        .stat-card h3 {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #18181b;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #27272a;
+        }
+
+        .data-table th {
+            background: #27272a;
+            color: white;
+            font-weight: 600;
+        }
+
+        .action-btn {
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s;
+        }
+
+        .btn-edit {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-delete {
+            background: #ef4444;
+            color: white;
+        }
+
+        /* Modal for Add/Edit */
+        .admin-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .admin-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Login Section -->
+    <div id="login-section" class="admin-login-wrapper">
+        <div class="form-card" style="width: 100%; max-width: 400px;">
+            <div class="text-center mb-8">
+                <i data-lucide="shield-check" style="width: 48px; height: 48px; color: var(--primary);"></i>
+                <h2 style="font-size: 2rem; margin-top: 1rem;">Admin Panel</h2>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Senha de Acesso</label>
+                    <input type="password" id="admin-pass" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">ENTRAR</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard-section" class="dashboard-layout">
+        <aside class="sidebar">
+            <a href="../index.html" class="logo" style="text-decoration: none;">
+                <span class="text-white">SP3C</span><span class="text-primary">ADMIN</span>
+            </a>
+            <div class="sidebar-menu">
+                <div class="menu-item active" onclick="switchTab('dashboard')">
+                    <i data-lucide="layout-dashboard"></i> Dashboard
+                </div>
+                <div class="menu-item" onclick="switchTab('giveaways')">
+                    <i data-lucide="gift"></i> Gerenciar Sorteios
+                </div>
+                <div class="menu-item" onclick="logout()">
+                    <i data-lucide="log-out"></i> Sair
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Header -->
+            <div class="admin-header">
+                <h2 id="page-title">Visão Geral</h2>
+                <button class="btn-primary" id="btn-add-new" onclick="openGiveawayModal()">
+                    <i data-lucide="plus"></i> Novo Sorteio
+                </button>
+            </div>
+
+            <!-- Content: Overview -->
+            <div id="view-dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Sorteios Ativos</h3>
+                        <div class="value" id="stat-active">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Sorteios Finalizados</h3>
+                        <div class="value">12</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Visitas Hoje</h3>
+                        <div class="value">158</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content: Giveaways List -->
+            <div id="view-giveaways" style="display: none;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Nome da Skin</th>
+                            <th>Termina em</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="giveaways-table-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Adding/Editing Giveaway -->
+    <div id="giveaway-modal" class="admin-modal">
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="modal-close" onclick="closeGiveawayModal()"><i data-lucide="x"></i></button>
+            <h3 class="modal-title">Configurar Sorteio</h3>
+
+            <form id="giveaway-config-form">
+                <input type="hidden" id="edit-id">
+
+                <div class="form-group">
+                    <label>Nome da Skin</label>
+                    <input type="text" id="skin-name" placeholder="Ex: AK-47 | Asiimov" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Valor (R$)</label>
+                    <input type="text" id="skin-value" placeholder="Ex: R$ 150,00" required>
+                </div>
+
+                <div class="form-group">
+                    <label>URL da Imagem</label>
+                    <input type="text" id="skin-image" placeholder="./assets/..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Depósito Mínimo ($)</label>
+                    <input type="text" id="min-deposit" placeholder="$5.00" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Data de Término</label>
+                    <input type="datetime-local" id="end-date" required>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">SALVAR</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="../admin.js"></script>
+</body>
+
+</html>

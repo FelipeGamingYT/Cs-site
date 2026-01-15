@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteio Dashskins | SP3C CS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+
+        <header class="header">
+            <div class="container header-content">
+                <a href="../index.html" class="logo" style="text-decoration: none;">
+
+                    <span class="text-white">SP3C</span>
+                    <i data-lucide="feather" class="text-primary" style="transform: rotate(45deg);"></i>
+                </a>
+                <nav class="desktop-nav">
+                    <a href="../index.html#partners">Parceiros</a>
+                    <a href="../index.html#giveaways">Sorteios</a>
+                    <a href="../index.html#how-to">Como Participar</a>
+                    <a href="../index.html#history">Histórico</a>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Formulários <i data-lucide="chevron-down"
+                                style="width: 16px;"></i></button>
+                        <div class="dropdown-content">
+                            <a href="CSSKINS.html">CSSKINS</a>
+                            <a href="dashskins.html">DashSkins</a>
+                            <a href="pirate.html">Pirate</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://youtube.com" target="_blank" class="btn-primary"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem; gap: 0.5rem;">
+                        <i data-lucide="youtube" style="width: 18px;"></i> Canal
+                    </a>
+                    <button class="btn-icon theme-toggle">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="page-container">
+            <div class="container" style="max-width: 800px; padding-top: 4rem; padding-bottom: 4rem;">
+
+                <div class="form-header text-center mb-8">
+                    <h1 class="section-title" style="font-size: 3rem;">SORTEIO <span
+                            class="text-primary">DASHSKINS</span> JANEIRO</h1>
+                    <p class="text-muted" style="font-size: 1.2rem; margin-top: 1rem;">
+                        R$1.000 em saldo na Dash para você gastar como quiser!
+                    </p>
+                </div>
+
+                <div class="form-card">
+                    <form id="dashskins-form" class="giveaway-form">
+
+
+                        <div class="form-group">
+                            <label for="user-name">Seu nome</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="user" class="input-icon"></i>
+                                <input type="text" id="user-name" placeholder="Digite seu nome" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="steam-url">Steam Trade URL</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="link" class="input-icon"></i>
+                                <input type="url" id="steam-url" placeholder="https://steamcommunity.com/tradeoffer/..."
+                                    required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="site-profile">Link do Perfil no Site</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="globe" class="input-icon"></i>
+                                <input type="url" id="site-profile" placeholder="Link do seu perfil no site depositado"
+                                    required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="deposit-amount">Valor do Depósito</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="dollar-sign" class="input-icon"></i>
+                                <input type="number" id="deposit-amount" placeholder="Valor exato depositado (R$)"
+                                    min="0" step="0.01" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Ativação do cupom (print)</label>
+                            <label for="upload-coupon" class="file-upload-area">
+                                <input type="file" id="upload-coupon" accept="image/*" hidden>
+                                <div class="upload-content">
+                                    <i data-lucide="upload-cloud" class="upload-icon"></i>
+                                    <span>Clique para anexar</span>
+                                    <small class="text-muted">JPG, PNG ou JPEG</small>
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Histórico de depósito (print)</label>
+                            <label for="upload-history" class="file-upload-area">
+                                <input type="file" id="upload-history" accept="image/*" hidden>
+                                <div class="upload-content">
+                                    <i data-lucide="upload-cloud" class="upload-icon"></i>
+                                    <span>Clique para anexar</span>
+                                    <small class="text-muted">JPG, PNG ou JPEG</small>
+                                </div>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width" style="font-size: 1.1rem; padding: 1rem;">
+                            ENVIAR PARTICIPAÇÃO
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="text-white">SP3C</span><span class="text-primary">CS</span>
+                    </div>
+                    <p class="footer-desc">
+                        Acompanhe todos os sorteios de skins de CS2 do canal em tempo real.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Links Úteis</h4>
+                        <a href="#">Sorteios</a>
+                        <a href="#">Parceiros</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Política de Privacidade</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Social</h4>
+                        <a href="#">YouTube</a>
+                        <a href="#">Twitter/X</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Steam Group</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SP3C CS. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SP3C CS – Criador de conteúdo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="bg-gradient-effect"></div>
+
+
+        <header class="header">
+            <div class="container header-content">
+                <div class="logo">
+
+                    <span class="text-white">SP3C</span>
+                    <i data-lucide="feather" class="text-primary" style="transform: rotate(45deg);"></i>
+                </div>
+                <nav class="desktop-nav">
+                    <a href="#partners">Parceiros</a>
+                    <a href="#giveaways">Sorteios</a>
+                    <a href="#how-to">Como Participar</a>
+                    <a href="#history">Histórico</a>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Formulários <i data-lucide="chevron-down"
+                                style="width: 16px;"></i></button>
+                        <div class="dropdown-content">
+                            <a href="pages/CSSKINS.html">CSSKINS</a>
+                            <a href="pages/dashskins.html">DashSkins</a>
+                            <a href="pages/pirate.html">Pirate</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://www.youtube.com/@felipesp3c" target="_blank" class="btn-primary"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem; gap: 0.5rem;">
+                        <i data-lucide="youtube" style="width: 18px;"></i> Canal
+                    </a>
+                    <button class="btn-icon theme-toggle">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="hero" style="text-align: center; justify-content: center;">
+
+                <div class="floating-icons">
+                    <div class="float-item"><i data-lucide="crosshair"></i></div>
+                    <div class="float-item"><i data-lucide="user"></i></div>
+                    <div class="float-item"><i data-lucide="video"></i></div>
+                </div>
+
+                <div class="container hero-container" style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div class="hero-content"
+                        style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+                        <div class="hero-logo" style="margin-bottom: 1rem; position: relative; display: inline-block;">
+                            <h1 class="hero-title"
+                                style="font-size: 6rem; letter-spacing: 5px; margin: 0; background: none; -webkit-text-fill-color: white;">
+                                SP3C</h1>
+                            <i data-lucide="feather" class="text-primary"
+                                style="position: absolute; right: -40px; top: 10px; width: 60px; height: 60px; transform: rotate(45deg);"></i>
+                        </div>
+
+                        <p class="hero-subtitle"
+                            style="font-size: 1rem; max-width: 600px; margin: 0 auto 2rem; color: #94a3b8; text-transform: none; line-height: 1.6;">
+                            Acompanhe todos os sorteios do canal em tempo real. Participe, ganhe
+                            skins incríveis e faça parte de nossa comunidade!
+                        </p>
+
+                        <a href="#giveaways" class="btn-primary"
+                            style="padding: 1rem 3rem; font-size: 1.2rem; border-radius: 0.5rem;">
+                            CONFIRA OS SORTEIOS
+                        </a>
+
+                        <div class="hero-stats"
+                            style="margin-top: 4rem; width: 100%; justify-content: center; gap: 4rem;">
+                            <div class="stat-item" style="align-items: center;">
+                                <span class="stat-value">10+</span>
+                                <span class="stat-label">Sorteios Realizados</span>
+                            </div>
+                            <div class="stat-item" style="align-items: center;">
+                                <span class="stat-value" style="color: var(--secondary);">100 pessoas</span>
+                                <span class="stat-label">Participantes</span>
+                            </div>
+                            <div class="stat-item" style="align-items: center;">
+                                <span class="stat-value">+R$1K</span>
+                                <span class="stat-label">Em Skins sorteadas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section exclusive-section p-0">
+                <div class="container">
+                    <div class="exclusive-banner">
+                        <button class="nav-arrow left"><i data-lucide="chevron-left"></i></button>
+
+                        <div class="banner-content">
+                            <div class="banner-text-side">
+                                <div class="partner-brand">
+
+                                    <span
+                                        style="font-weight: 800; color: white; display: flex; align-items: center; gap: 0.5rem;">
+                                        <i data-lucide="dollar-sign" style="color: #d946ef;"></i> DASHSKINS
+                                    </span>
+                                </div>
+                                <h2>Sorteio Exclusivo <span style="color: #d946ef;">Dashskins</span></h2>
+                                <p>Deposite na Dashskins utilizando o cupom <strong style="color: white;">SP3C</strong>
+                                    e ganhe entradas para o sorteio de R$1000 em skins! Cada R$1 = 1 entrada.</p>
+                                <a href="#" class="btn-primary"
+                                    style="background: #d946ef; border:none; width: fit-content; margin-top: 1rem;">
+                                    Participar <i data-lucide="arrow-right" style="width: 16px;"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <button class="nav-arrow right"><i data-lucide="chevron-right"></i></button>
+                    </div>
+
+
+                    <div class="banner-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="partners" class="section partners-section">
+                <div class="container">
+                    <div class="section-badge">CONFIANÇA</div>
+                    <h2 class="section-title">NOSSOS PARCEIROS</h2>
+                    <p class="section-subtitle">Sites verificados e recomendados pela nossa comunidade.</p>
+
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-badge">TOP 1</div>
+                            <div class="partner-logo">CS-SKINS</div>
+                            <p>Melhores taxas para compra e venda de skins.</p>
+                            <div class="coupon-box" onclick="copyToClipboard('SP3C CS')">
+                                <span class="coupon-label">CUPOM</span>
+                                <span class="code">SP3C CS</span>
+                                <i data-lucide="copy" class="copy-icon"></i>
+                            </div>
+                            <a href="#" class="btn-primary full-width">VISITAR SITE</a>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">DSKINS</div>
+                            <p>O maior marketplace de skins do Brasil.</p>
+                            <div class="coupon-box" onclick="copyToClipboard('SP3C')">
+                                <span class="coupon-label">CUPOM</span>
+                                <span class="code">SP3C</span>
+                                <i data-lucide="copy" class="copy-icon"></i>
+                            </div>
+                            <a href="#" class="btn-primary full-width">VISITAR SITE</a>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">DROP</div>
+                            <p>Ganhe skins grátis todos os dias.</p>
+                            <div class="coupon-box" onclick="copyToClipboard('SP3C CS')">
+                                <span class="coupon-label">CUPOM</span>
+                                <span class="code">SP3C CS</span>
+                                <i data-lucide="copy" class="copy-icon"></i>
+                            </div>
+                            <a href="#" class="btn-primary full-width">VISITAR SITE</a>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">CASE</div>
+                            <p>Abertura de caixas com as melhores odds.</p>
+                            <div class="coupon-box" onclick="copyToClipboard('SP3C')">
+                                <span class="coupon-label">CUPOM</span>
+                                <span class="code">SP3C</span>
+                                <i data-lucide="copy" class="copy-icon"></i>
+                            </div>
+                            <a href="#" class="btn-primary full-width">VISITAR SITE</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="giveaways" class="section giveaways-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div>
+                            <div class="section-badge">OPORTUNIDADE</div>
+                            <h2 class="section-title">SORTEIOS ATIVOS</h2>
+                        </div>
+                        <a href="#history" class="link-view-all">VER HISTÓRICO <i data-lucide="chevron-right"></i></a>
+                    </div>
+
+                    <div class="giveaways-grid" id="active-giveaways-grid">
+                        <!-- Cards loaded dynamically via main.js from localStorage -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="how-to" class="section how-to-section">
+                <div class="container">
+                    <div class="section-badge">GUIA</div>
+                    <h2 class="section-title">COMO PARTICIPAR</h2>
+                    <p class="section-subtitle">Siga os passos abaixo para concorrer às skins.</p>
+
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-number">01</div>
+                            <div class="step-icon">
+                                <i data-lucide="monitor-up"></i>
+                            </div>
+                            <h3>ACESSE O SITE</h3>
+                            <p>Escolha um dos nossos parceiros oficiais acima e faça login com sua Steam.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">02</div>
+                            <div class="step-icon">
+                                <i data-lucide="ticket"></i>
+                            </div>
+                            <h3>USE O CUPOM</h3>
+                            <p>No momento do depósito, utilize o cupom <strong class="text-primary">SP3C</strong> para
+                                ativar seu bônus.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">03</div>
+                            <div class="step-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <h3>PREENCHA O FORM</h3>
+                            <p>Vá na aba "Formulários", escolha o site e preencha com o trade link e o comprovante.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">04</div>
+                            <div class="step-icon">
+                                <i data-lucide="trophy"></i>
+                            </div>
+                            <h3>BOA SORTE!</h3>
+                            <p>Agora é só torcer! Os resultados são divulgados em live e aqui no site.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="history" class="section history-section">
+                <div class="container">
+                    <div class="section-badge">RESULTADOS</div>
+                    <h2 class="section-title">HISTÓRICO DE GANHADORES</h2>
+                    <p class="section-subtitle">Confira as últimas skins entregues para a comunidade.</p>
+
+                    <div class="history-grid">
+                        <article class="history-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://via.placeholder.com/300x200/18181b/52525b?text=USP-S+Kill+Confirmed"
+                                    alt="Skin">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-date">10 JAN 2026</div>
+                                <h3>USP-S | KILL CONFIRMED</h3>
+                                <div class="winner-row">
+                                    <i data-lucide="user"></i>
+                                    <span>Ganhador: <strong>JoaoSilva123</strong></span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="history-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://via.placeholder.com/300x200/18181b/52525b?text=Glock-18+Vogue"
+                                    alt="Skin">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-date">05 JAN 2026</div>
+                                <h3>GLOCK-18 | VOGUE</h3>
+                                <div class="winner-row">
+                                    <i data-lucide="user"></i>
+                                    <span>Ganhador: <strong>MariaSouza</strong></span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="history-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://via.placeholder.com/300x200/18181b/52525b?text=AK-47+Slate"
+                                    alt="Skin">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-date">01 JAN 2026</div>
+                                <h3>AK-47 | SLATE</h3>
+                                <div class="winner-row">
+                                    <i data-lucide="user"></i>
+                                    <span>Ganhador: <strong>PedroGamer</strong></span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="history-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://via.placeholder.com/300x200/18181b/52525b?text=AWP+Atheris"
+                                    alt="Skin">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-date">28 DEZ 2025</div>
+                                <h3>AWP | ATHERIS</h3>
+                                <div class="winner-row">
+                                    <i data-lucide="user"></i>
+                                    <span>Ganhador: <strong>LucasSkin</strong></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="text-white">SP3C</span><span class="text-primary">CS</span>
+                    </div>
+                    <p class="footer-desc">
+                        Acompanhe todos os sorteios de skins de CS2 do canal em tempo real.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Links Úteis</h4>
+                        <a href="#giveaways">Sorteios</a>
+                        <a href="#partners">Parceiros</a>
+                        <a href="#how-to">Como Participar</a>
+                        <a href="#history">Histórico</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Social</h4>
+                        <a href="#">YouTube</a>
+                        <a href="#">Twitter/X</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Steam Group</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SP3C CS. Todos os direitos reservados. <a href="pages/admin.html"
+                        style="color: #333; text-decoration: none; margin-left: 10px;">Admin</a></p>
+            </div>
+        </footer>
+    </div>
+    <div id="participation-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i data-lucide="x"></i></button>
+            <h3 class="modal-title">Participar do Sorteio</h3>
+            <p class="modal-subtitle">Preencha os dados abaixo para confirmar sua entrada.</p>
+
+            <form id="participation-form">
+                <div class="form-group">
+                    <label for="steam-trade-url">Steam Trade URL</label>
+                    <input type="url" id="steam-trade-url" placeholder="https://steamcommunity.com/tradeoffer/new/..."
+                        required>
+                    <small class="form-hint">Encontre seu link <a
+                            href="https://steamcommunity.com/id/me/tradeoffers/privacy"
+                            target="_blank">aqui</a>.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="deposit-amount">Valor do Depósito</label>
+                    <input type="number" id="deposit-amount" placeholder="R$ 0,00" min="0" step="0.01" required>
+                    <small class="form-hint">Informe o valor exato depositado.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="site-profile-url">Link do Perfil no Site</label>
+                    <input type="url" id="site-profile-url" placeholder="Ex: https://csgo-skins.com/user/..." required>
+                    <small class="form-hint">O link do seu perfil no site onde realizou o depósito.</small>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-outline modal-cancel">Cancelar</button>
+                    <button type="submit" class="btn-primary">Confirmar Participação</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
