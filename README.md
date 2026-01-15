@@ -17,7 +17,7 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
   <img src="imagens/imagnes (5).png" width="400" alt="Mobile View">
 </div>
 
-## ✨ Funcionalidades
+
 
 ## ✨ Funcionalidades
 
@@ -85,3 +85,4 @@ Este site foi otimizado para voar! 🚀
 
 ---
 Desenvolvido por **Felipe Sp3c**
+
