@@ -3,6 +3,8 @@
 ![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0-fuchsia)
 ![Status](https://img.shields.io/badge/status-otimizado-green)
 
+⚠️ **Aviso Importante:** Este é um projeto de **teste/demonstração**. O sistema não está 100% finalizado e pode conter falhas, especialmente no painel administrativo. Não é recomendado para uso em produção sem as devidas implementações de segurança e backend real.
+
 Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Counter-Strike, focada em gerenciar e exibir sorteios de skins de forma automatizada e atraente.
 
 ## 📸 Screenshots
@@ -63,7 +65,7 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
 
 1. **Clonar o repositório:**
    ```bash
-    https://github.com/FelipeGamingYT/site-novo-cs.git
+      https://github.com/FelipeGamingYT/Cs-site.git
    ```
 2. **Abrir localmente:**
    Basta abrir o arquivo `index.html` em qualquer navegador moderno.
@@ -81,5 +83,3 @@ Este site foi otimizado para voar! 🚀
 
 ---
 Desenvolvido por **Felipe Sp3c**
-
-
