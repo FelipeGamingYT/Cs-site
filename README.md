@@ -10,12 +10,14 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="unknown/unknown_2026.01.15-12.13.png" width="400" alt="Home Page">
-  <img src="unknown/unknown_2026.01.15-12.13_1.png" width="400" alt="Giveaways Section">
-  <img src="unknown/unknown_2026.01.15-12.13_2.png" width="400" alt="Admin Dashboard">
-  <img src="unknown/unknown_2026.01.15-12.13_3.png" width="400" alt="Participation Form">
-  <img src="unknown/unknown_2026.01.15-12.13_5.png" width="400" alt="Mobile View">
+  <img src="imagens/imagnes (1).png" width="400" alt="Home Page">
+  <img src="imagens/imagnes (2).png" width="400" alt="Giveaways Section">
+  <img src="imagens/imagnes (3).png" width="400" alt="Admin Dashboard">
+  <img src="imagens/imagnes (4).png" width="400" alt="Participation Form">
+  <img src="imagens/imagnes (5).png" width="400" alt="Mobile View">
 </div>
+
+## ✨ Funcionalidades
 
 ## ✨ Funcionalidades
 
