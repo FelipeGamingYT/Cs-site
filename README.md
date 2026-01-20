@@ -17,7 +17,7 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
   <img src="imagens/imagnes (5).png" width="400" alt="Mobile View">
 </div>
 
-## ✨ Funcionalidades
+
 
 ## ✨ Funcionalidades
 
@@ -77,7 +77,7 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
 
 ## 🛠️ Otimizações de Performance
 
-Este site foi otimizado para voar! 🚀
+      foi otimizado para voar! 🚀
 - **Event Delegation**: Gerenciamento de cliques centralizado para economizar memória.
 - **Lazy Loading**: Imagens só carregam quando aparecem na tela.
 - **High FPS**: Animações utilizando `will-change` para processamento via GPU.
@@ -85,3 +85,4 @@ Este site foi otimizado para voar! 🚀
 
 ---
 Desenvolvido por **Felipe Sp3c**
+
