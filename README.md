@@ -67,7 +67,7 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
 
 1. **Clonar o repositório:**
    ```bash
-      https://github.com/FelipeGamingYT/Cs-site.git
+      [https://github.com/FelipeGamingYT/Cs-site.git](https://github.com/FelipeGamingYT/Cs-site.git)
    ```
 2. **Abrir localmente:**
    Basta abrir o arquivo `index.html` em qualquer navegador moderno.
@@ -85,5 +85,6 @@ Uma plataforma moderna e premium desenvolvida para criadores de conteúdo de Cou
 
 ---
 Desenvolvido por **Felipe Sp3c**
+
 
 
